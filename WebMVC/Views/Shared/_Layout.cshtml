@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="header-fixed">
+    <div class="wrapper">
+        @Html.Partial("_Encabezado")
+
+
+        @RenderBody()
+
+        @Html.Partial("_Pie")
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+
+        @* AGREGO EL BOUNDLECONFIG DE UNIFI  *@
+        @Scripts.Render("~/bundles/unifi")
+        @RenderSection("scripts", required: false)
+        <script src="~/Scripts/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="~/Scripts/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+
+        <script>
+            jQuery(document).ready(function () {
+                App.init();
+                App.initScrollBar();
+                App.initParallaxBg();
+                OwlCarousel.initOwlCarousel();
+                RevolutionSlider.initRSfullWidth();
+                StyleSwitcher.initStyleSwitcher();
+            });
+        </script>
+
+    </div>
+</body>
+</html>

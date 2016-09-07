@@ -1,0 +1,173 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+/*MODIFICACION DE ESTILOS PARA MARNIC*/
+
+.topbar-v3 {
+    background: #F9F10C;
+}
+.header-v5 .navbar-default .navbar-nav > li > a:hover, .header-v5 .navbar-default .navbar-nav > .active > a{
+border-top: solid 2px #F2B900;
+}
+.header-v5 .navbar-default .navbar-nav > .active > a {
+color: #000000
+}
+.header-v5 .navbar-default .navbar-nav > li > a {
+color: #000000
+}
+
+.header-v5 .navbar-default .navbar-nav > .active > a:hover {
+color: #F2B900;
+}
+.header-v5 .navbar-default .navbar-nav > li > a:hover {
+color: #F2B900;
+}
+
+.header-v5 .dropdown-menu {
+border-top:none ;
+}
+
+/*ESTILOS PIE MARNIC*/
+.footer-v4 .footer {
+    padding: 50px 0;
+    background: #F2B900;
+}
+.footer-v4 h2.thumb-headline {
+    color: #232323;
+    font-weight:bold;
+}
+
+.footer-v4 .simple-list a {
+   color: #232323;
+}
+.footer-v4 .address-list li {
+   color: #232323;
+}
+.footer-v4 .footer p {
+   color: #232323;
+}
+
+/*ESTILOS PRODUCTOS MARNIC*/
+.shop-green {
+    color: #F9F10C;
+}
+.breadcrumbs-v4 .breadcrumb-v4-in li.active, .breadcrumbs-v4 .breadcrumb-v4-in li a:hover {
+    color: #F9F10C;
+}
+
+.filter-by-block h1 {
+     background: #F9F10C; 
+}
+.grid-list-icons i {
+    background: #F9F10C; 
+}
+.checkbox-list .checkbox input + i:after {
+    color: #F9F10C;
+}
+.checkbox-list .checkbox input:checked + i {
+    border-color: #F9F10C;
+}
+.checkbox-list .checkbox small a {
+    color: #F9F10C;
+}
+.btn-u.btn-brd.btn-u-sea-shop {
+    color: #F9F10C;
+    background: none;
+    border-color: #F9F10C;
+}
+
+.btn-u.btn-u-sea-shop {
+    background: #F9F10C;
+}
+
+.btn-u.btn-brd.btn-u-sea-shop {
+    color: #F9F10C;
+    background: none;
+    border-color: #F9F10C;
+}
+.filter-results {
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-top: none;
+}
+.product-ratings li .rating-selected {
+    color: #F9F10C;
+    font-size: 14px;
+}
+.product-ratings li .rating {
+    color: #808080;
+    font-size: 14px;
+}
+.product-ratings li.like-icon a {
+    color: #f00;
+}
+.pagination.pagination-v2 > li > a:hover, .pagination.pagination-v2 > .active > a, .pagination.pagination-v2 > .active > span, .pagination.pagination-v2 > .active > a:hover, .pagination.pagination-v2 > .active > span:hover, .pagination.pagination-v2 > .active > a:focus, .pagination.pagination-v2 > .active > span:focus {
+    background: #F9F10C;
+    border-color: #F9F10C;
+}
+.checkbox-list .checkbox input + i:before {
+    color: #F9F10C;
+}
+.checkbox-list .checkbox input + i:after {
+	color: #F9F10C;
+}
