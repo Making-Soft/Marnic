@@ -234,7 +234,9 @@
     <Content Include="Content\img\Logo_Grande.png" />
     <Content Include="Content\img\map.png" />
     <Content Include="Content\img\others\fb.png" />
-    <Content Include="Content\img\Productos\100.jpg" />
+    <Content Include="Content\img\Productos\100.png" />
+    <Content Include="Content\img\Sliders\slider1.jpg" />
+    <Content Include="Content\img\Sliders\slider2.jpg" />
     <Content Include="Content\img\sponsors\01.png" />
     <Content Include="Content\img\sponsors\02.png" />
     <Content Include="Content\img\sponsors\03.png" />
@@ -777,6 +779,7 @@
     <Content Include="Views\Shared\_Pie.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Empresa\Contacto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
