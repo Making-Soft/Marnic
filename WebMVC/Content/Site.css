@@ -171,3 +171,8 @@ border-top:none ;
 .checkbox-list .checkbox input + i:after {
 	color: #F9F10C;
 }
+
+/*breadcrumbs marnic*/
+.breadcrumbs {
+    background-color: lightgrey;
+}
