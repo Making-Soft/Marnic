@@ -174,5 +174,5 @@ border-top:none ;
 
 /*breadcrumbs marnic*/
 .breadcrumbs {
-    background-color: lightgrey;
+    background-image: url(../img/collection-bg.jpg);
 }
