@@ -5,6 +5,9 @@ function ocultar(nombreCapa) {
     document.getElementById(nombreCapa).style.display = "none";
 }
 
+function activarcheck(id) {
+    document.getElementById(id).checked = true
+}
 function cambiarDisplay(id) {
 
     if (!document.getElementById)
