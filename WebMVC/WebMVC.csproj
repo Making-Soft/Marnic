@@ -173,11 +173,6 @@
     <Content Include="Content\css\theme-colors\orange.css" />
     <Content Include="Content\css\theme-colors\purple.css" />
     <Content Include="Content\css\theme-colors\red.css" />
-    <Content Include="Content\img\1.jpg" />
-    <Content Include="Content\img\2.jpg" />
-    <Content Include="Content\img\3.jpg" />
-    <Content Include="Content\img\4.jpg" />
-    <Content Include="Content\img\5.jpg" />
     <Content Include="Content\img\blank.gif" />
     <Content Include="Content\img\blog\01.jpg" />
     <Content Include="Content\img\blog\02.jpg" />
@@ -1082,7 +1077,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52619</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52619/</IISUrl>
+          <IISUrl>http://localhost:52633/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
