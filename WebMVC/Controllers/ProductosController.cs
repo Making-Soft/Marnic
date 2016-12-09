@@ -15,16 +15,12 @@ namespace WebMVC.Controllers
         public ActionResult Index()
         {
 
-            //cargo los combos
+
             CategoriaRepository cb = new CategoriaRepository();
-            ViewBag.Categoria_1 = cb.ObtenerCategoria(1);
-            ViewBag.Categoria_0 = cb.ObtenerCategoria(0);
-
-
-            ProductosRepository pr = new ProductosRepository();
-            ViewBag.Productos = pr.Productos_nivel1("");
-
+            ViewBag.Categoria_0 = cb.Categoria("in(0)");            
+            ViewBag.Categoria_1 = cb.Categoria("in(1,2,3,4,5,6,7,8,9,10)");
             return View();
+
 
         }
     }

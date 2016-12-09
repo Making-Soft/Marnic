@@ -13,10 +13,15 @@ function cambiarDisplay(id) {
     { fila = document.getElementById(id); }
 
 
-    if (fila.style.display != "none")
+    /*if (fila.style.display != "none")
     { $('.col-md-4').css('display', 'none'); }
     else
-    { $('.col-md-4').css('display', 'block'); }
+    { $('.col-md-4').css('display', 'block'); }*/
+
+    if (fila.style.display != "none")
+    { ocultar(id); }
+    else
+    { mostrar(id); }
 }
 
 

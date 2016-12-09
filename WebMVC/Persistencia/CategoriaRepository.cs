@@ -13,46 +13,44 @@ namespace WebMVC.Persistencia
     public class CategoriaRepository
     {
 
-        public List<Categoria> ObtenerCategoria(int nivel)
+        public List<Categoria> Categoria(string filtro)
         {
-            List<Categoria> Categoria = new List<Categoria>();
-
+           
             Conn c = new Conn(ConfigurationManager.ConnectionStrings["ECommerce"].ConnectionString);
             DataTable dt = new DataTable();
             StringBuilder qry = new StringBuilder();
-            qry.Append("select * from obtener_Categorias_Nivel_1");
-            qry.Append(" where nivel=");
-            qry.Append(nivel);
-            qry.Append(" Order by dependede");
-
-            dt = c.GetTable(qry.ToString());                
-            foreach (DataRow row in dt.Rows)
-            {
-                Categoria.Add(PopulateEntity(row));
-            }
+            qry.Append("select * from VW_Categorias_Productos where dependede ");
+            qry.Append(filtro);
+            dt = c.GetTable(qry.ToString());
+            List<Categoria> lst = PopulateList(dt);
             c.Close();
-
-
-            return Categoria;
+            return lst; 
         }
 
+        private List<Categoria> PopulateList(DataTable dt)
+        {
+            List<Categoria> Categoria = new List<Categoria>();
+            foreach (DataRow item in dt.Rows)
+            {
+                Categoria.Add(PopulateEntity(item));
+            }
+            return Categoria;
+        }
 
         private Categoria PopulateEntity(DataRow row)
         {
             Entidades e = new Entidades();
             Categoria Categoria = new Categoria();
-
             Categoria.Id_Categoria_Producto = e.GetInt(row, "Id_Categoria_Producto");
             Categoria.Id_Sitio = e.GetInt(row, "Id_Sitio");
             Categoria.Nivel = e.GetInt(row, "Nivel");
             Categoria.Dependede = e.GetInt(row, "Dependede");
-            Categoria.Descripcion = e.GetString(row, "Descripcion");
             Categoria.Cantidad = e.GetInt(row, "Cantidad");
-            Categoria.visible = e.GetBool(row, "visible");
-            Categoria.CategoriaCompleta = e.GetString(row, "CategoriaCompleta");
-
+            Categoria.Descripcion = e.GetString(row, "Descripcion");           
+            ProductosRepository tr = new ProductosRepository();
+            Categoria.Productos = tr.Productos(Categoria.Id_Categoria_Producto);
             return Categoria;
         }
-
+        
     }
 }

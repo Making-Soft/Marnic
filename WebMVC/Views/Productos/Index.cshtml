@@ -87,62 +87,55 @@
             </div><!--/end panel group-->
 
             @*<button type="button" class="btn-u btn-brd btn-brd-hover btn-u-lg btn-u-sea-shop btn-block">Reset</button>*@
-        </div>
-        
-                
-                <div class="col-md-9">
-                    
+        </div>                      
+                <div class="col-md-9">                    
                         <div class="filter-results">
                             <div class="row illustration-v2">
-                              @if (ViewBag.Productos != null)
-{
-    foreach (var pr in ViewBag.Productos)
-    {
-        <div id="@pr.Id_Categoria_Producto_c0.ToString()" class="col-md-4" style="display:none">
-            <div class="product-img product-img-brd">
-                <a href="#"><img class="full-width img-responsive" src="@pr.Ruta_Imagen.ToString()" alt=""></a>
-                <a class="product-review" href="shop-ui-inner.html">Solicitar</a>
-            </div>
-            <div class="product-description product-description-brd margin-bottom-30">
-                <div class="overflow-h margin-bottom-5">
-                    <div class="pull-left">
-                        <h4 class="title-price"><a href="shop-ui-inner.html">Codigo: @pr.Nombre.ToString()</a></h4>
-                        <span class="gender text-uppercase">@pr.Descripcion.ToString()</span>
-                    </div>
-                    <div class="product-price">
-                    </div>
-                </div>
-                <ul class="list-inline product-ratings">
-                    <li><i class="rating-selected fa fa-star"></i></li>
-                    <li><i class="rating-selected fa fa-star"></i></li>
-                    <li><i class="rating-selected fa fa-star"></i></li>
-                    <li><i class="rating fa fa-star"></i></li>
-                    <li><i class="rating fa fa-star"></i></li>
-                    <li class="like-icon"><a data-original-title="Me gusta" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                </ul>
-            </div>
-        </div>
+                              @if (ViewBag.Categoria_1 != null)
+                                {
+                                    foreach (var pc in ViewBag.Categoria_1)
+                                    {
+                                        <div id="@pc.Id_Categoria_Producto.ToString()" style="display:none;">
+                                            @if (pc.Productos.Count > 0)
+                                            {
+                                                foreach (var pr in pc.Productos)
+                                                {
+                                                <div class="col-md-4">
+                                                <div class="product-img product-img-brd">
+                                                    <a href="#"><img class="full-width img-responsive" src="@pr.Ruta_Imagen.ToString()" alt=""></a>
+                                                    <a class="product-review" href="shop-ui-inner.html">Solicitar</a>
+                                                </div>
+                                                <div class="product-description product-description-brd margin-bottom-30">
+                                                    <div class="overflow-h margin-bottom-5">
+                                                        <div class="pull-left">
+                                                            <h4 class="title-price"><a href="shop-ui-inner.html">Codigo: @pr.Nombre.ToString()</a></h4>
+                                                            <span class="gender text-uppercase">@pr.Descripcion.ToString()</span>
+                                                        </div>
+                                                        <div class="product-price">
+                                                        </div>
+                                                    </div>
+                                                    <ul class="list-inline product-ratings">
+                                                        <li><i class="rating-selected fa fa-star"></i></li>
+                                                        <li><i class="rating-selected fa fa-star"></i></li>
+                                                        <li><i class="rating-selected fa fa-star"></i></li>
+                                                        <li><i class="rating fa fa-star"></i></li>
+                                                        <li><i class="rating fa fa-star"></i></li>
+                                                        <li class="like-icon"><a data-original-title="Me gusta" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                 </div>
+                                                }
+                                            }
+                                        </div>
 
-    }
-}
+                                    }
+                                }
                             </div>
                         </div>
-                        <!--/end filter resilts-->
-                       
-                    @*<div class="text-center">
-                        <ul class="pagination pagination-v2">
-                            <li><a href="#"><i class="fa fa-angle-left"></i></a></li>                    
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                        </ul>
-                    </div>*@<!--/end pagination-->
                 </div>
            
     </div><!--/end row-->
 </div><!--/end container-->
-<!--=== End Content Part ===-->
-<!--=== Shop Suvbscribe ===-->
-<!--=== End Shop Suvbscribe ===-->
 
 
 <script>

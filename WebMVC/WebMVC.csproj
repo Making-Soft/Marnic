@@ -433,6 +433,7 @@
     <Content Include="Scripts\Funciones.js" />
     <Content Include="Scripts\Home\index.js" />
     <Content Include="Persistencia\desktop.ini" />
+    <None Include="Properties\PublishProfiles\marniciluminacion.com.ar.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
