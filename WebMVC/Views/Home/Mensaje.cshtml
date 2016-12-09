@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Mensaje";
+}
+<br />
+<hr />
+<br />
+
+@if (Request.QueryString["rec"] == "1")
+{
+
+    <div class="alert alert-success fade in margin-bottom-40" style="margin-top:60px;padding:30px;margin-right:30px;margin-left:30px;">
+        <h2>Operacion realizada con éxito!</h2>
+        <br />
+        <h4>@ViewBag.Message</h4>
+        <p style="margin-top:20px;"><a href="/Home/Index" style="color:white"><div class="btn btn-success">Volver al inicio</div></a></p>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger fade in margin-bottom-40" style="margin-top:60px;padding:30px;margin-right:30px;margin-left:30px;">
+        <h4>Su operacion no se ha podido realizar!</h4>
+        <br />
+        @ViewBag.Message
+        <p style="margin-top:20px;"><a href="/Home/Index" style="color:white"><div class="btn btn-danger">Volver al inicio</div></a></p>
+    </div>
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

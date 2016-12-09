@@ -15,5 +15,27 @@ namespace WebMVC.Controllers
             return View();
 
         }
+        public ActionResult Mensaje()
+        {
+
+            if (Request.QueryString["rec"] == "1")
+            {
+                if (string.IsNullOrEmpty(Request.QueryString["msj"]) == false)
+                {
+                    string msj = Request.QueryString["msj"];
+                    ViewBag.Message = msj;
+                }
+                else
+                {
+                    ViewBag.Message = "";
+                }
+            }
+            else
+            {
+                string msj = Request.QueryString["msj"];
+                ViewBag.Message = msj;
+            }
+            return View();
+        }
     }
 }
