@@ -1,155 +1,153 @@
 ﻿@{
     ViewBag.Title = "Productos";
 }
+<body onload="mostrar('11'); activarcheck('chk_11');">
+    <!--=== Breadcrumbs v4 ===-->
+    <div class="breadcrumbs-v4">
+        <div class="container">
+            <span class="page-name">Productos por categoria</span>
+            <h1>Mira nuestros<span class="shop-green"> Productos</span> </h1>
+            <ul class="breadcrumb-v4-in">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li class="active">Productos Filtrados</li>
+            </ul>
+        </div><!--/end container-->
+    </div>
+    <!--=== End Breadcrumbs v4 ===-->
+    <!--=== Content Part ===-->
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-3 filter-by-block md-margin-bottom-60">
+                <h1>Filtrar Por:</h1>
+                @*<div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                        Tipo Producto
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <ul class="list-unstyled checkbox-list">
+                                        @if (ViewBag.Categoria_0 != null)
+                                        {
+                                            foreach (var t in ViewBag.Categoria_0)
+                                            {
+                                                <li>
 
-<!--=== Breadcrumbs v4 ===-->
-<div class="breadcrumbs-v4">
-    <div class="container">
-        <span class="page-name">Productos por categoria</span>
-        <h1>Mira nuestros<span class="shop-green"> Productos</span> </h1>
-        <ul class="breadcrumb-v4-in">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="">Productos</a></li>
-            <li class="active">Productos Filtrados</li>
-        </ul>
-    </div><!--/end container-->
-</div>
-<!--=== End Breadcrumbs v4 ===-->
-<!--=== Content Part ===-->
-<div class="content container">
-    <div class="row">
-        <div class="col-md-3 filter-by-block md-margin-bottom-60">
-            <h1>Filtrar Por:</h1>
-            <div class="panel-group" id="accordion">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h2 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                Tipo Producto
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-                        </h2>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse in">
-                        <div class="panel-body">
-                            <ul class="list-unstyled checkbox-list">
-                                @if (ViewBag.Categoria_0 != null)
-                                {
-                                    foreach (var t in ViewBag.Categoria_0)
-                                    {
-                                        <li>
-
-                                            <label class="checkbox">
-                                                <input type="checkbox" name="checkbox" />
-                                                <i></i>@t.Descripcion.ToString()
-                                                <small><a href="#">(@t.Cantidad.ToString())</a></small>
-                                            </label>
-                                        </li>
-                                    }
-                                }
-                            </ul>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" name="checkbox" />
+                                                        <i></i>@t.Descripcion.ToString()
+                                                        <small><a href="#">(@t.Cantidad.ToString())</a></small>
+                                                    </label>
+                                                </li>
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div>*@
 
-            <div class="panel-group" id="accordion">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h2 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                Categoria
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-                        </h2>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in">
-                        <div class="panel-body">
-                            <ul class="list-unstyled checkbox-list">
-                                @if (ViewBag.Categoria_1 != null)
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    Categoria
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <ul class="list-unstyled checkbox-list">
+                                    @if (ViewBag.Categoria_1 != null)
                                 {
                                     foreach (var t in ViewBag.Categoria_1)
                                     {
-                                        <li>
+                                <li>
 
-                                            <label class="checkbox">
-                                                <input type="checkbox" name="checkbox" onclick="cambiarDisplay(@t.Id_Categoria_Producto.ToString())" />
-                                                <i></i>@t.Descripcion.ToString()
-                                                <small><a href="#">(@t.Cantidad.ToString())</a></small>
-                                            </label>
-                                        </li> 
+                                    <label class="checkbox">
+                                        <input id="chk_@t.Id_Categoria_Producto.ToString()" type="checkbox" name="chk_@t.Id_Categoria_Producto.ToString()" onclick="cambiarDisplay(@t.Id_Categoria_Producto.ToString())" />
+                                        <i></i>@t.Descripcion.ToString()
+                                        <small><a href="#">(@t.Cantidad.ToString())</a></small>
+                                    </label>
+                                </li>
                                         }
-                                }               
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/end panel group-->
-
-            @*<button type="button" class="btn-u btn-brd btn-brd-hover btn-u-lg btn-u-sea-shop btn-block">Reset</button>*@
-        </div>
-        
-                
-                <div class="col-md-9">
-                    
-                        <div class="filter-results">
-                            <div class="row illustration-v2">
-                              @if (ViewBag.Productos != null)
-{
-    foreach (var pr in ViewBag.Productos)
-    {
-        <div id="@pr.Id_Categoria_Producto_c0.ToString()" class="col-md-4" style="display:none">
-            <div class="product-img product-img-brd">
-                <a href="#"><img class="full-width img-responsive" src="@pr.Ruta_Imagen.ToString()" alt=""></a>
-                <a class="product-review" href="shop-ui-inner.html">Solicitar</a>
-            </div>
-            <div class="product-description product-description-brd margin-bottom-30">
-                <div class="overflow-h margin-bottom-5">
-                    <div class="pull-left">
-                        <h4 class="title-price"><a href="shop-ui-inner.html">Codigo: @pr.Nombre.ToString()</a></h4>
-                        <span class="gender text-uppercase">@pr.Descripcion.ToString()</span>
-                    </div>
-                    <div class="product-price">
-                    </div>
-                </div>
-                <ul class="list-inline product-ratings">
-                    <li><i class="rating-selected fa fa-star"></i></li>
-                    <li><i class="rating-selected fa fa-star"></i></li>
-                    <li><i class="rating-selected fa fa-star"></i></li>
-                    <li><i class="rating fa fa-star"></i></li>
-                    <li><i class="rating fa fa-star"></i></li>
-                    <li class="like-icon"><a data-original-title="Me gusta" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                </ul>
-            </div>
-        </div>
-
-    }
-}
+                                }
+                                </ul>
                             </div>
                         </div>
-                        <!--/end filter resilts-->
-                       
-                    @*<div class="text-center">
-                        <ul class="pagination pagination-v2">
-                            <li><a href="#"><i class="fa fa-angle-left"></i></a></li>                    
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                        </ul>
-                    </div>*@<!--/end pagination-->
+                    </div>
+                </div><!--/end panel group-->
+                @*<button type="button" class="btn-u btn-brd btn-brd-hover btn-u-lg btn-u-sea-shop btn-block">Reset</button>*@
+            </div>
+            <div class="col-md-9">
+                <div class="filter-results">
+                    @if (ViewBag.Categoria_1 != null)
+                    {
+                        foreach (var pc in ViewBag.Categoria_1)
+                        {
+
+                            int j = 0;
+                            <div id="@pc.Id_Categoria_Producto.ToString()" style="display:none;">
+                                @if (pc.Productos.Count > 0)
+                                {
+                                    @Html.Raw("<div>")
+                                    foreach (var pr in pc.Productos)
+                                    {
+
+                                        j = j + 1;
+                                        if ((j - 1) % 3 == 0 || j == 0)
+                                        {
+                                            @Html.Raw("</div>")
+                                            @Html.Raw("<div class='row illustration-v2'>");
+                                        }
+
+                                        <div class="col-md-4">
+                                            <div class="product-img product-img-brd">
+                                                <a href="#"><img class="full-width img-responsive" src="@pr.Ruta_Imagen.ToString()" alt=""></a>
+                                                <a class="product-review" href="shop-ui-inner.html">Solicitar</a>
+                                            </div>
+                                            <div class="product-description product-description-brd margin-bottom-30">
+                                                <div class="overflow-h margin-bottom-5">
+                                                    <div class="pull-left">
+                                                        <h4 class="title-price"><a href="shop-ui-inner.html">Codigo: @pr.Nombre.ToString()</a></h4>
+                                                        <span class="gender text-uppercase">@pr.Descripcion.ToString()</span>
+                                                    </div>
+                                                    <div class="product-price">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+
+
+                                    @Html.Raw("</div>")
+
+
+                                }
+                            </div>
+                        }
+                    }
                 </div>
-           
+            </div>
+        </div>
+
     </div><!--/end row-->
-</div><!--/end container-->
-<!--=== End Content Part ===-->
-<!--=== Shop Suvbscribe ===-->
-<!--=== End Shop Suvbscribe ===-->
+    </div><!--/end container-->
+    </body>
 
-
-<script>
-    jQuery(document).ready(function () {
-        App.init();
-        App.initScrollBar();
-        MouseWheel.initMouseWheel();
-        StyleSwitcher.initStyleSwitcher();
-    });
-</script>
+    <script>
+        jQuery(document).ready(function () {
+            App.init();
+            App.initScrollBar();
+            MouseWheel.initMouseWheel();
+            StyleSwitcher.initStyleSwitcher();
+        });
+    </script>

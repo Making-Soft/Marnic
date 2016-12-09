@@ -428,6 +428,7 @@
     <Content Include="Scripts\Funciones.js" />
     <Content Include="Scripts\Home\index.js" />
     <Content Include="Persistencia\desktop.ini" />
+    <None Include="Properties\PublishProfiles\marniciluminacion.com.ar.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -869,6 +870,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Empresa\Contacto.cshtml" />
+    <Content Include="Views\Home\Mensaje.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -29,6 +29,11 @@ namespace WebMVC.Persistencia
             return row.IsNull(field) ? 0 : (double)row[field];
         }
 
+        public float GetFloat(System.Data.DataRow row, string field)
+        {
+            return row.IsNull(field) ? 0 : (float)row[field];
+        }
+
         public long GetLng(System.Data.DataRow row, string field)
         {
             return row.IsNull(field) ? 0 : (long)row[field];

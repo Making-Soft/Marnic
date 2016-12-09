@@ -5,6 +5,9 @@ function ocultar(nombreCapa) {
     document.getElementById(nombreCapa).style.display = "none";
 }
 
+function activarcheck(id) {
+    document.getElementById(id).checked = true
+}
 function cambiarDisplay(id) {
 
     if (!document.getElementById)
@@ -13,10 +16,15 @@ function cambiarDisplay(id) {
     { fila = document.getElementById(id); }
 
 
-    if (fila.style.display != "none")
+    /*if (fila.style.display != "none")
     { $('.col-md-4').css('display', 'none'); }
     else
-    { $('.col-md-4').css('display', 'block'); }
+    { $('.col-md-4').css('display', 'block'); }*/
+
+    if (fila.style.display != "none")
+    { ocultar(id); }
+    else
+    { mostrar(id); }
 }
 
 

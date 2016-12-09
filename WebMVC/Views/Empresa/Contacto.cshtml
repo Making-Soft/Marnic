@@ -31,13 +31,13 @@
     <div class="row margin-bottom-30">
         <div class="col-md-9 mb-margin-bottom-30">
             <p>Cualquier consulta acerca de nuestros productos</p><br>
-            <form action="assets/php/sky-forms-pro/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form contact-style">
+            <form action="/Empresa/Contacto" method="post" id="sky-form3" class="sky-form contact-style">
                 @*<fieldset class="no-padding">*@
                 <label class="h4">Nombre <span class="color-red">*</span></label>
                 <div class="row sky-space-20">
                     <div class="col-md-7 col-md-offset-0">
                         <div>
-                            <input type="text" name="name" id="name" class="form-control">
+                            <input type="text" name="nombre" id="nombre" class="form-control" required>
                         </div>
                     </div>
                 </div>
@@ -45,11 +45,11 @@
                 <div class="row sky-space-20">
                     <div class="col-md-7 col-md-offset-0">
                         <div>
-                            <input type="text" name="email" id="email" class="form-control">
+                            <input type="text" name="email" id="email" class="form-control" required>
                         </div>
                     </div>
                 </div>
-                <label class="h4">Teléfono <span class="color-red">*</span></label>
+                <label class="h4">Teléfono <span class="color-red"></span></label>
                 <div class="row sky-space-20">
                     <div class="col-md-7 col-md-offset-0">
                         <div>
@@ -61,16 +61,14 @@
                 <div class="row sky-space-20">
                     <div class="col-md-11 col-md-offset-0">
                         <div>
-                            <textarea rows="8" name="message" id="message" class="form-control"></textarea>
+                            <textarea rows="8" name="consulta" id="consulta" class="form-control" required></textarea>
                         </div>
                     </div>
                 </div>
-                <p><button type="submit" class="btn-u">Consultar</button></p>
+                <br />
+                <p><button type="submit" class="btn-u" style="right:0px;">Enviar</button></p>
                 @*</fieldset>*@
-                <div class="message">
-                    <i class="rounded-x fa fa-check"></i>
-                    <p>Mensaje enviado con éxito. Gracias por pensar en Marnic, a la brevedad nos contactaremos con usted!</p>
-                </div>
+               
             </form>
         </div><!--/col-md-9-->
         <div class="col-md-3">
