@@ -179,3 +179,10 @@ border-top:none ;
 .btn-u {
     background-color:#F2B900;
 }
+
+.headline h2, .headline h3, .headline h4 {
+    border-bottom: 2px solid #F2B900;
+}
+.btn-u:hover, .btn-u:focus, .btn-u:active, .btn-u.active, .open .dropdown-toggle.btn-u {
+    background: #F9F10C;
+}
